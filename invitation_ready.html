@@ -1,0 +1,2298 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Հրավեր — 30.10.2026</title>
+
+    <meta name="description" content="Հատուկ հրավեր՝ 30 հոկտեմբերի 2026">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Armenian:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           BASIC
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Noto Sans Armenian", "Manrope", sans-serif;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(140, 170, 91, .13), transparent 30%),
+                radial-gradient(circle at 90% 20%, rgba(220, 196, 145, .16), transparent 30%),
+                linear-gradient(135deg, #fbfaf5, #f3f2e9);
+            color: #43533a;
+            overflow-x: hidden;
+        }
+
+        button,
+        input,
+        select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           LOADING SCREEN
+        ===================================================== */
+
+        #loader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: #f8f6ed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: opacity 1s ease, visibility 1s ease;
+        }
+
+        #loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-balloon {
+            width: 75px;
+            height: 90px;
+            background: #82995c;
+            border-radius: 50% 50% 48% 48%;
+            position: relative;
+            animation: balloonFloat 2s ease-in-out infinite;
+            box-shadow: 0 15px 35px rgba(76, 91, 57, .18);
+        }
+
+        .loader-balloon::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 70px;
+            background: #82995c;
+            left: 50%;
+            top: 85px;
+        }
+
+        .loader-text {
+            margin-top: 95px;
+            font-size: 15px;
+            color: #6d795f;
+            letter-spacing: 1px;
+        }
+
+        @keyframes balloonFloat {
+            0%,100% {
+                transform: translateY(0) rotate(-3deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(3deg);
+            }
+        }
+
+
+        /* =====================================================
+           DECORATIONS
+        ===================================================== */
+
+        .floating {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            opacity: .7;
+        }
+
+        .balloon {
+            width: 65px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .balloon::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 120px;
+            background: rgba(70, 83, 56, .22);
+            top: 75px;
+            left: 50%;
+        }
+
+        .balloon.one {
+            background: #82975e;
+            left: 3%;
+            top: 14%;
+            animation: floatOne 8s ease-in-out infinite;
+        }
+
+        .balloon.two {
+            width: 45px;
+            height: 55px;
+            background: #ded4ba;
+            right: 5%;
+            top: 30%;
+            animation: floatTwo 9s ease-in-out infinite;
+        }
+
+        .balloon.three {
+            width: 38px;
+            height: 48px;
+            background: #ffffff;
+            left: 8%;
+            bottom: 15%;
+            animation: floatThree 7s ease-in-out infinite;
+        }
+
+        @keyframes floatOne {
+            0%,100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-35px) rotate(7deg); }
+        }
+
+        @keyframes floatTwo {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(40px); }
+        }
+
+        @keyframes floatThree {
+            0%,100% { transform: translateY(0) rotate(4deg); }
+            50% { transform: translateY(-25px) rotate(-5deg); }
+        }
+
+
+        /* =====================================================
+           NAV
+        ===================================================== */
+
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            width: min(92%, 850px);
+            padding: 12px 18px;
+            background: rgba(255,255,255,.72);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(80,90,60,.1);
+            border-radius: 50px;
+            box-shadow: 0 15px 40px rgba(54, 64, 45, .08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-weight: 800;
+            color: #687b50;
+            font-size: 15px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #69715f;
+            font-size: 13px;
+            padding: 8px 13px;
+            border-radius: 30px;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            background: #edf0e5;
+            color: #4f613e;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 120px 20px 80px;
+        }
+
+        .hero-container {
+            width: min(1100px, 100%);
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .invitation-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .invitation-glow {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            background: #c9d1b3;
+            filter: blur(70px);
+            opacity: .25;
+            border-radius: 50%;
+        }
+
+        .invitation-image {
+            width: min(390px, 100%);
+            position: relative;
+            border-radius: 28px;
+            box-shadow:
+                0 35px 70px rgba(58, 69, 45, .18),
+                0 5px 15px rgba(58, 69, 45, .08);
+            animation: invitationAppear 1.5s ease forwards;
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        @keyframes invitationAppear {
+            to {
+                opacity: 1;
+                transform: translateY(0) rotate(-1deg);
+            }
+        }
+
+        .hero-content {
+            animation: heroContent .9s .3s ease forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes heroContent {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .small-label {
+            color: #89996d;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: clamp(42px, 6vw, 76px);
+            line-height: .98;
+            color: #596a47;
+            font-weight: 800;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        .hero-title span {
+            display: block;
+            color: #b4a37d;
+            font-size: .45em;
+            letter-spacing: 1px;
+            margin-top: 18px;
+        }
+
+        .hero-description {
+            max-width: 500px;
+            color: #717966;
+            line-height: 1.9;
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+
+        .date-large {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .date-number {
+            font-size: 52px;
+            font-weight: 800;
+            color: #62764d;
+            line-height: 1;
+        }
+
+        .date-text {
+            font-size: 13px;
+            color: #8b907e;
+            line-height: 1.7;
+        }
+
+        .main-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            border: none;
+            background: #708656;
+            color: white;
+            padding: 16px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 15px 30px rgba(90,110,66,.2);
+            transition: .35s;
+        }
+
+        .main-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(90,110,66,.3);
+            background: #5f7546;
+        }
+
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        section {
+            position: relative;
+            z-index: 2;
+            padding: 100px 20px;
+        }
+
+        .section-container {
+            width: min(1000px, 100%);
+            margin: auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-heading .eyebrow {
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #9ba486;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(32px, 5vw, 52px);
+            color: #596947;
+            margin-bottom: 14px;
+        }
+
+        .section-heading p {
+            color: #858b79;
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           EVENT DETAILS
+        ===================================================== */
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .detail-card {
+            background: rgba(255,255,255,.75);
+            border: 1px solid rgba(104,120,77,.1);
+            border-radius: 28px;
+            padding: 35px 20px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(61,75,48,.06);
+            transition: .4s;
+        }
+
+        .detail-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(61,75,48,.1);
+        }
+
+        .detail-icon {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #edf1e5;
+            color: #697c52;
+            font-size: 22px;
+        }
+
+        .detail-card h3 {
+            color: #596947;
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .detail-card p {
+            color: #929888;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            margin-top: 5px;
+            color: #a99a75;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           COUNTDOWN
+        ===================================================== */
+
+        .countdown-section {
+            background: rgba(230,233,216,.35);
+        }
+
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .time-box {
+            background: rgba(255,255,255,.8);
+            border: 1px solid rgba(100,115,77,.1);
+            border-radius: 25px;
+            padding: 30px 15px;
+            text-align: center;
+        }
+
+        .time-box strong {
+            display: block;
+            font-size: clamp(32px, 5vw, 50px);
+            color: #60754c;
+            font-weight: 800;
+        }
+
+        .time-box span {
+            font-size: 11px;
+            color: #939a85;
+            letter-spacing: 2px;
+        }
+
+
+        /* =====================================================
+           RSVP
+        ===================================================== */
+
+        .rsvp-card {
+            max-width: 700px;
+            margin: auto;
+            background: rgba(255,255,255,.85);
+            border-radius: 35px;
+            padding: clamp(30px, 6vw, 60px);
+            box-shadow: 0 30px 80px rgba(58,70,45,.1);
+            border: 1px solid rgba(95,110,70,.1);
+        }
+
+        .rsvp-question {
+            text-align: center;
+            color: #596947;
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+
+        .choice-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .choice {
+            border: 2px solid #e4e7dc;
+            background: #fafbf7;
+            color: #68745d;
+            border-radius: 20px;
+            padding: 18px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .choice:hover {
+            border-color: #a7b58e;
+            transform: translateY(-2px);
+        }
+
+        .choice.active {
+            background: #e9efdf;
+            border-color: #73885a;
+            color: #526741;
+        }
+
+        .choice.yes.active {
+            box-shadow: 0 10px 25px rgba(112,134,86,.15);
+        }
+
+        .choice.no.active {
+            background: #f5eee5;
+            border-color: #c5ad89;
+            color: #8c7450;
+        }
+
+        .form-content {
+            display: none;
+            animation: formAppear .5s ease;
+        }
+
+        .form-content.show {
+            display: block;
+        }
+
+        @keyframes formAppear {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 12px;
+            color: #707a65;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 15px 17px;
+            border: 1px solid #e0e4d7;
+            border-radius: 15px;
+            background: #fbfcf8;
+            color: #526043;
+            outline: none;
+            transition: .3s;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: #9cac82;
+            box-shadow: 0 0 0 4px rgba(145,163,112,.1);
+        }
+
+        .submit-button {
+            width: 100%;
+            border: none;
+            padding: 17px;
+            border-radius: 17px;
+            background: #708656;
+            color: white;
+            font-weight: 800;
+            margin-top: 10px;
+            transition: .3s;
+        }
+
+        .submit-button:hover {
+            background: #5f7546;
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           NO RESPONSE
+        ===================================================== */
+
+        .no-message {
+            display: none;
+            text-align: center;
+            padding: 15px 0;
+            color: #7d816f;
+            line-height: 1.8;
+        }
+
+        .no-message.show {
+            display: block;
+            animation: formAppear .5s ease;
+        }
+
+
+        /* =====================================================
+           SUCCESS
+        ===================================================== */
+
+        .success {
+            display: none;
+            text-align: center;
+            animation: successAppear .7s ease;
+        }
+
+        .success.show {
+            display: block;
+        }
+
+        @keyframes successAppear {
+            from {
+                opacity: 0;
+                transform: scale(.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #e7eedc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+        }
+
+        .success h3 {
+            color: #5c7049;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .success p {
+            color: #818875;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #9a9e8e;
+            font-size: 12px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .heart {
+            color: #a9a07f;
+        }
+
+
+        /* =====================================================
+           CONFETTI
+        ===================================================== */
+
+        .confetti {
+            position: fixed;
+            width: 9px;
+            height: 15px;
+            top: -30px;
+            z-index: 10000;
+            pointer-events: none;
+            animation: confettiFall linear forwards;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            nav {
+                top: 10px;
+            }
+
+            .nav-links a {
+                padding: 7px 8px;
+                font-size: 11px;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 55px;
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .date-large {
+                justify-content: center;
+            }
+
+            .main-button {
+                margin: auto;
+            }
+
+            .invitation-image {
+                width: min(340px, 85vw);
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: auto;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                width: 94%;
+            }
+
+            .nav-logo {
+                font-size: 12px;
+            }
+
+            .nav-links a:nth-child(1) {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 100px;
+            }
+
+            .hero-title {
+                font-size: 48px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            section {
+                padding: 75px 18px;
+            }
+
+            .countdown {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .choice-container {
+                grid-template-columns: 1fr;
+            }
+
+            .rsvp-card {
+                padding: 28px 20px;
+                border-radius: 25px;
+            }
+
+            .balloon {
+                opacity: .35;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE-FIRST PHONE DESIGN
+        ===================================================== */
+
+        @media (max-width: 600px) {
+            body {
+                width: 100%;
+                min-width: 0;
+                overflow-x: hidden;
+                background:
+                    radial-gradient(circle at 50% 0%, rgba(201,209,179,.22), transparent 32%),
+                    linear-gradient(180deg, #fbfaf5 0%, #f4f3eb 100%);
+            }
+
+            nav {
+                top: 10px;
+                width: calc(100% - 24px);
+                padding: 10px 12px 10px 15px;
+                border-radius: 22px;
+                background: rgba(255,255,255,.88);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                box-shadow: 0 10px 35px rgba(54,64,45,.10);
+            }
+
+            .nav-logo {
+                font-size: 11px;
+                white-space: nowrap;
+                letter-spacing: .5px;
+            }
+
+            .nav-links { gap: 3px; }
+
+            .nav-links a {
+                font-size: 10px;
+                padding: 7px 9px;
+                border-radius: 13px;
+            }
+
+            .nav-links a:nth-child(1) { display: none; }
+
+            .hero {
+                min-height: auto;
+                padding: 105px 16px 70px;
+            }
+
+            .hero-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 42px;
+                text-align: center;
+            }
+
+            .invitation-wrapper {
+                width: 100%;
+                order: 1;
+            }
+
+            .invitation-glow {
+                width: 85%;
+                height: 85%;
+                filter: blur(55px);
+            }
+
+            .invitation-image {
+                width: min(86vw, 370px);
+                max-height: 62vh;
+                object-fit: contain;
+                border-radius: 23px;
+                box-shadow:
+                    0 25px 55px rgba(58,69,45,.17),
+                    0 5px 15px rgba(58,69,45,.08);
+            }
+
+            .hero-content {
+                width: 100%;
+                order: 2;
+            }
+
+            .small-label {
+                font-size: 9px;
+                letter-spacing: 3px;
+                margin-bottom: 15px;
+            }
+
+            .hero-title {
+                font-size: clamp(42px, 13vw, 58px);
+                letter-spacing: -2px;
+                line-height: .98;
+                margin-bottom: 20px;
+            }
+
+            .hero-title span {
+                font-size: .38em;
+                line-height: 1.45;
+                margin-top: 14px;
+                letter-spacing: .3px;
+            }
+
+            .hero-description {
+                max-width: 330px;
+                font-size: 13px;
+                line-height: 1.85;
+                margin: 0 auto 25px;
+            }
+
+            .date-large {
+                justify-content: center;
+                gap: 11px;
+                margin-bottom: 27px;
+            }
+
+            .date-number { font-size: 43px; }
+
+            .date-text {
+                font-size: 11px;
+                text-align: left;
+            }
+
+            .main-button {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+                padding: 15px 20px;
+                font-size: 13px;
+                margin: 0 auto;
+            }
+
+            section { padding: 72px 15px; }
+
+            .section-container { width: 100%; }
+
+            .section-heading { margin-bottom: 32px; }
+
+            .section-heading .eyebrow {
+                font-size: 9px;
+                letter-spacing: 3px;
+                margin-bottom: 11px;
+            }
+
+            .section-heading h2 {
+                font-size: 32px;
+                line-height: 1.1;
+                margin-bottom: 11px;
+            }
+
+            .section-heading p {
+                font-size: 12px;
+                line-height: 1.7;
+                max-width: 320px;
+                margin: auto;
+            }
+
+            .details-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                max-width: 100%;
+            }
+
+            .detail-card {
+                display: grid;
+                grid-template-columns: 52px 1fr;
+                grid-template-rows: auto auto;
+                column-gap: 15px;
+                text-align: left;
+                padding: 18px;
+                border-radius: 22px;
+                min-height: 88px;
+            }
+
+            .detail-icon {
+                width: 52px;
+                height: 52px;
+                grid-row: 1 / 3;
+                margin: 0;
+                font-size: 20px;
+            }
+
+            .detail-card h3 {
+                font-size: 14px;
+                margin: 2px 0 5px;
+            }
+
+            .detail-card p {
+                font-size: 11px;
+                line-height: 1.55;
+            }
+
+            .coming-soon {
+                font-size: 10px;
+                margin-top: 2px;
+            }
+
+            .countdown {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                width: 100%;
+            }
+
+            .time-box {
+                padding: 22px 10px;
+                border-radius: 20px;
+            }
+
+            .time-box strong { font-size: 34px; }
+
+            .time-box span {
+                font-size: 8px;
+                letter-spacing: 1.5px;
+            }
+
+            .rsvp-card {
+                width: 100%;
+                padding: 25px 17px;
+                border-radius: 26px;
+                box-shadow: 0 20px 55px rgba(58,70,45,.09);
+            }
+
+            .rsvp-question {
+                font-size: 21px;
+                margin-bottom: 22px;
+            }
+
+            .choice-container {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                margin-bottom: 24px;
+            }
+
+            .choice {
+                width: 100%;
+                padding: 16px;
+                border-radius: 17px;
+                font-size: 13px;
+            }
+
+            .input-group { margin-bottom: 14px; }
+
+            .input-group label {
+                font-size: 11px;
+                margin-bottom: 7px;
+            }
+
+            .input-group input,
+            .input-group select {
+                min-height: 50px;
+                padding: 13px 14px;
+                border-radius: 14px;
+                font-size: 14px;
+            }
+
+            .submit-button {
+                min-height: 51px;
+                padding: 14px;
+                border-radius: 15px;
+                font-size: 13px;
+            }
+
+            .no-message {
+                font-size: 12px;
+                line-height: 1.8;
+            }
+
+            .success-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 30px;
+            }
+
+            .success h3 { font-size: 22px; }
+
+            .success p {
+                font-size: 12px;
+                line-height: 1.8;
+            }
+
+            footer {
+                padding: 45px 18px 55px;
+                font-size: 10px;
+            }
+
+            .floating.balloon {
+                transform: scale(.65);
+                opacity: .28;
+            }
+
+            .balloon.one { left: -20px; top: 20%; }
+            .balloon.two { right: -12px; top: 38%; }
+            .balloon.three { left: -8px; bottom: 10%; }
+        }
+
+        @media (max-width: 380px) {
+            nav {
+                width: calc(100% - 16px);
+                padding-left: 12px;
+                padding-right: 9px;
+            }
+
+            .nav-logo { font-size: 10px; }
+
+            .nav-links a {
+                font-size: 9px;
+                padding: 6px 7px;
+            }
+
+            .hero {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .invitation-image { width: 88vw; }
+
+            .hero-title { font-size: 42px; }
+
+            section {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .rsvp-card {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         LOADER
+    ====================================================== -->
+
+    <div id="loader">
+        <div class="loader-balloon"></div>
+        <div class="loader-text">
+            Հրավերը բացվում է...
+        </div>
+    </div>
+
+
+    <!-- =====================================================
+         FLOATING DECORATIONS
+    ====================================================== -->
+
+    <div class="floating balloon one"></div>
+    <div class="floating balloon two"></div>
+    <div class="floating balloon three"></div>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav>
+
+        <div class="nav-logo">
+            ✦ ՀՐԱՎԵՐ
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#event">
+                Միջոցառումը
+            </a>
+
+            <a href="#countdown">
+                Հետհաշվարկ
+            </a>
+
+            <a href="#rsvp">
+                Պատասխանել
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-container">
+
+
+                <!-- INVITATION -->
+
+                <div class="invitation-wrapper">
+
+                    <div class="invitation-glow"></div>
+
+                    <!--
+                        IMPORTANT:
+                        Put your uploaded invitation image
+                        next to this HTML file and name it:
+
+                        invitation.png
+                    -->
+
+                    <img
+                        src="invitation.png"
+                        alt="Հրավերի քարտ"
+                        class="invitation-image"
+                    >
+
+                </div>
+
+
+                <!-- TEXT -->
+
+                <div class="hero-content">
+
+                    <div class="small-label">
+                        Հատուկ հրավեր
+                    </div>
+
+                    <h1 class="hero-title">
+
+                        Սիրով
+                        <br>
+                        սպասում ենք
+                        <span>
+                            Ձեզ մեր հատուկ օրվա կապակցությամբ
+                        </span>
+
+                    </h1>
+
+                    <p class="hero-description">
+
+                        Այս փոքրիկ թվային հրավերը ստեղծվել է
+                        հատուկ Ձեզ համար։
+                        Պահպանեք ամսաթիվը և տեղեկացրեք մեզ,
+                        թե արդյոք կմիանաք մեր ուրախ օրվան։
+
+                    </p>
+
+
+                    <div class="date-large">
+
+                        <div class="date-number">
+                            30.10
+                        </div>
+
+                        <div class="date-text">
+
+                            Հոկտեմբեր<br>
+                            <strong>2026</strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="main-button"
+                        onclick="scrollToSection('event')"
+                    >
+
+                        Տեսնել մանրամասները
+
+                        <span>↓</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             EVENT DETAILS
+        ====================================================== -->
+
+        <section id="event">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        ՄԻՋՈՑԱՌՄԱՆ ՄԱՍԻՆ
+                    </div>
+
+                    <h2>
+                        Պահպանեք ամսաթիվը
+                    </h2>
+
+                    <p>
+                        Մնացած մանրամասները կհայտարարվեն շուտով։
+                    </p>
+
+                </div>
+
+
+                <div class="details-grid">
+
+
+                    <!-- DATE -->
+
+                    <div class="detail-card">
+
+                        <div class="detail-icon">
+                            📅
+                        </div>
+
+                        <h3>
+                            Ամսաթիվ
+                        </h3>
+
+                        <p>
+                            Ուրբաթ<br>
+
+                            <strong>
+                                30 հոկտեմբերի 2026
+                            </strong>
+                        </p>
+
+                    </div>
+
+
+                    <!-- TIME -->
+
+                    <div class="detail-card">
+
+                        <div class="detail-icon">
+                            🕐
+                        </div>
+
+                        <h3>
+                            Ժամը
+                        </h3>
+
+                        <p>
+                            Ժամը դեռ որոշված չէ։
+                        </p>
+
+                        <span class="coming-soon">
+                            Կհայտարարվի շուտով
+                        </span>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="detail-card">
+
+                        <div class="detail-icon">
+                            📍
+                        </div>
+
+                        <h3>
+                            Վայրը
+                        </h3>
+
+                        <p>
+                            Միջոցառման վայրը
+                            դեռ որոշված չէ։
+                        </p>
+
+                        <span class="coming-soon">
+                            Կհայտարարվի շուտով
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             COUNTDOWN
+        ====================================================== -->
+
+        <section
+            id="countdown"
+            class="countdown-section"
+        >
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        ՄԻՆՉԵՎ ՀԱՏՈՒԿ ՕՐԸ
+                    </div>
+
+                    <h2>
+                        Հետհաշվարկ
+                    </h2>
+
+                    <p>
+                        Մենք արդեն հաշվում ենք օրերը։
+                    </p>
+
+                </div>
+
+
+                <div class="countdown">
+
+
+                    <div class="time-box">
+
+                        <strong id="days">
+                            00
+                        </strong>
+
+                        <span>
+                            ՕՐ
+                        </span>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <strong id="hours">
+                            00
+                        </strong>
+
+                        <span>
+                            ԺԱՄ
+                        </span>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <strong id="minutes">
+                            00
+                        </strong>
+
+                        <span>
+                            ՐՈՊԵ
+                        </span>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <strong id="seconds">
+                            00
+                        </strong>
+
+                        <span>
+                            ՎԱՅՐԿՅԱՆ
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             RSVP
+        ====================================================== -->
+
+        <section id="rsvp">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        ՊԱՏԱՍԽԱՆ
+                    </div>
+
+                    <h2>
+                        Կմիանա՞ք մեզ
+                    </h2>
+
+                    <p>
+                        Խնդրում ենք լրացնել մասնակցության ձևը։
+                    </p>
+
+                </div>
+
+
+                <div class="rsvp-card">
+
+
+                    <!-- QUESTION -->
+
+                    <div id="rsvpMain">
+
+                        <h3 class="rsvp-question">
+                            Արդյո՞ք կմասնակցեք
+                        </h3>
+
+
+                        <div class="choice-container">
+
+                            <button
+                                class="choice yes"
+                                id="yesButton"
+                                onclick="chooseAnswer('yes')"
+                            >
+                                ✓ Այո, կմասնակցեմ
+                            </button>
+
+
+                            <button
+                                class="choice no"
+                                id="noButton"
+                                onclick="chooseAnswer('no')"
+                            >
+                                × Ոչ, չեմ կարող
+                            </button>
+
+                        </div>
+
+
+                        <!-- YES FORM -->
+
+                        <div
+                            id="yesForm"
+                            class="form-content"
+                        >
+
+                            <div class="input-group">
+
+                                <label>
+                                    Ձեր անունը
+                                </label>
+
+                                <input
+                                    id="guestName"
+                                    type="text"
+                                    placeholder="Գրեք Ձեր անունը"
+                                    autocomplete="name"
+                                >
+
+                            </div>
+
+
+                            <div class="input-group">
+
+                                <label>
+                                    Քանի՞ հոգով եք գալու
+                                </label>
+
+                                <select id="guestCount">
+
+                                    <option value="">
+                                        Ընտրեք
+                                    </option>
+
+                                    <option value="1">
+                                        1 հոգի
+                                    </option>
+
+                                    <option value="2">
+                                        2 հոգի
+                                    </option>
+
+                                    <option value="3">
+                                        3 հոգի
+                                    </option>
+
+                                    <option value="4">
+                                        4 հոգի
+                                    </option>
+
+                                    <option value="5">
+                                        5 հոգի
+                                    </option>
+
+                                    <option value="6">
+                                        6 հոգի
+                                    </option>
+
+                                    <option value="7">
+                                        7 հոգի
+                                    </option>
+
+                                    <option value="8">
+                                        8 հոգի
+                                    </option>
+
+                                    <option value="9">
+                                        9 հոգի
+                                    </option>
+
+                                    <option value="10">
+                                        10 հոգի
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <button
+                                class="submit-button"
+                                onclick="submitRSVP()"
+                            >
+                                Հաստատել մասնակցությունը
+                            </button>
+
+                        </div>
+
+
+                        <!-- NO MESSAGE -->
+
+                        <div
+                            id="noMessage"
+                            class="no-message"
+                        >
+
+                            <p>
+                                Շնորհակալ ենք, որ տեղեկացրեցիք մեզ։ ❤️
+                            </p>
+
+                            <p>
+                                Հուսով ենք՝ հաջորդ անգամ անպայման կհանդիպենք։
+                            </p>
+
+                            <button
+                                class="submit-button"
+                                type="button"
+                                onclick="submitNoRSVP()"
+                            >
+                                Ուղարկել պատասխանը
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SUCCESS -->
+
+                    <div
+                        id="success"
+                        class="success"
+                    >
+
+                        <div class="success-icon">
+                            ✓
+                        </div>
+
+                        <h3>
+                            Շնորհակալություն։
+                        </h3>
+
+                        <p id="successText">
+                            Ձեր մասնակցությունը հաստատված է։
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div>
+            Սիրով ստեղծված այս հատուկ օրվա համար
+        </div>
+
+        <div style="margin-top:10px;">
+            <span class="heart">♥</span>
+            30.10.2026
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* =====================================================
+           LOADER
+        ===================================================== */
+
+        window.addEventListener("load", function() {
+
+            setTimeout(function() {
+
+                document
+                    .getElementById("loader")
+                    .classList
+                    .add("hidden");
+
+            }, 1000);
+
+        });
+
+
+
+        /* =====================================================
+           SMOOTH SCROLL
+        ===================================================== */
+
+        function scrollToSection(id) {
+
+            const section = document.getElementById(id);
+
+            if (!section) return;
+
+            section.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+
+
+        /* =====================================================
+           COUNTDOWN
+        ===================================================== */
+
+        // Event date:
+        // 30 October 2026
+        //
+        // Time is not available yet,
+        // so countdown currently targets midnight.
+        //
+        // When you know the exact time,
+        // change:
+        //
+        // 2026-10-30T00:00:00
+        //
+        // to for example:
+        //
+        // 2026-10-30T18:00:00
+
+        const eventDate = new Date(
+            "2026-10-30T00:00:00"
+        ).getTime();
+
+
+        function updateCountdown() {
+
+            const now = new Date().getTime();
+
+            const difference = eventDate - now;
+
+
+            if (difference <= 0) {
+
+                document.getElementById("days").textContent = "00";
+                document.getElementById("hours").textContent = "00";
+                document.getElementById("minutes").textContent = "00";
+                document.getElementById("seconds").textContent = "00";
+
+                return;
+
+            }
+
+
+            const days = Math.floor(
+                difference /
+                (1000 * 60 * 60 * 24)
+            );
+
+
+            const hours = Math.floor(
+                (difference %
+                    (1000 * 60 * 60 * 24)) /
+                (1000 * 60 * 60)
+            );
+
+
+            const minutes = Math.floor(
+                (difference %
+                    (1000 * 60 * 60)) /
+                (1000 * 60)
+            );
+
+
+            const seconds = Math.floor(
+                (difference %
+                    (1000 * 60)) /
+                1000
+            );
+
+
+            document.getElementById("days").textContent =
+                String(days).padStart(2, "0");
+
+
+            document.getElementById("hours").textContent =
+                String(hours).padStart(2, "0");
+
+
+            document.getElementById("minutes").textContent =
+                String(minutes).padStart(2, "0");
+
+
+            document.getElementById("seconds").textContent =
+                String(seconds).padStart(2, "0");
+
+        }
+
+
+        updateCountdown();
+
+        setInterval(updateCountdown, 1000);
+
+
+
+        /* =====================================================
+           RSVP CHOICE
+        ===================================================== */
+
+        let selectedAnswer = null;
+
+
+        function chooseAnswer(answer) {
+
+            selectedAnswer = answer;
+
+
+            const yesButton =
+                document.getElementById("yesButton");
+
+            const noButton =
+                document.getElementById("noButton");
+
+            const yesForm =
+                document.getElementById("yesForm");
+
+            const noMessage =
+                document.getElementById("noMessage");
+
+
+            yesButton.classList.remove("active");
+            noButton.classList.remove("active");
+
+            yesForm.classList.remove("show");
+            noMessage.classList.remove("show");
+
+
+            if (answer === "yes") {
+
+                yesButton.classList.add("active");
+
+                setTimeout(function() {
+
+                    yesForm.classList.add("show");
+
+                }, 150);
+
+            }
+
+
+            if (answer === "no") {
+
+                noButton.classList.add("active");
+
+                setTimeout(function() {
+
+                    noMessage.classList.add("show");
+
+                }, 150);
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           RSVP SUBMIT — GOOGLE SHEETS
+        ===================================================== */
+
+        const SCRIPT_URL =
+            "https://script.google.com/macros/s/AKfycbx95Z1rriD11Li6cOwlRUWiT2v-RYNT-LClIjvA4N7ZksIQyhU-kzP5mP4YPJdKQR-3ww/exec";
+
+
+        async function sendRSVP(name, answer, people = "") {
+
+            try {
+
+                await fetch(SCRIPT_URL, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: {
+                        "Content-Type": "text/plain;charset=utf-8"
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        answer: answer,
+                        people: people
+                    })
+                });
+
+                return true;
+
+            } catch (error) {
+
+                console.error("RSVP error:", error);
+                return false;
+
+            }
+
+        }
+
+
+        async function submitRSVP() {
+
+            const name =
+                document
+                    .getElementById("guestName")
+                    .value
+                    .trim();
+
+
+            const count =
+                document
+                    .getElementById("guestCount")
+                    .value;
+
+
+            if (!name) {
+
+                alert(
+                    "Խնդրում ենք գրել Ձեր անունը։"
+                );
+
+                document
+                    .getElementById("guestName")
+                    .focus();
+
+                return;
+
+            }
+
+
+            if (!count) {
+
+                alert(
+                    "Խնդրում ենք նշել, թե քանի հոգով եք գալու։"
+                );
+
+                document
+                    .getElementById("guestCount")
+                    .focus();
+
+                return;
+
+            }
+
+
+            const button =
+                document.querySelector("#yesForm .submit-button");
+
+            button.disabled = true;
+            button.textContent = "Ուղարկվում է...";
+
+
+            const sent =
+                await sendRSVP(
+                    name,
+                    "Այո",
+                    count
+                );
+
+
+            if (!sent) {
+
+                button.disabled = false;
+                button.textContent =
+                    "Հաստատել մասնակցությունը";
+
+                alert(
+                    "Չհաջողվեց ուղարկել պատասխանը։ Խնդրում ենք կրկին փորձել։"
+                );
+
+                return;
+
+            }
+
+
+            const response = {
+
+                name: name,
+                people: count,
+                answer: "Այո",
+                date: new Date().toISOString(),
+                event: "30.10.2026"
+
+            };
+
+
+            localStorage.setItem(
+                "eventRSVP",
+                JSON.stringify(response)
+            );
+
+
+            document
+                .getElementById("rsvpMain")
+                .style.display = "none";
+
+
+            document
+                .getElementById("success")
+                .classList
+                .add("show");
+
+
+            document
+                .getElementById("successText")
+                .innerHTML =
+                `
+                ${escapeHTML(name)}, Ձեր մասնակցությունը հաստատված է։<br><br>
+                Սպասում ենք Ձեզ և ևս ${count} հոգու<br>
+                <strong>30 հոկտեմբերի 2026-ին։</strong>
+                `;
+
+
+            createConfetti();
+
+        }
+
+
+        /* =====================================================
+           NO ANSWER — GOOGLE SHEETS
+        ===================================================== */
+
+        async function submitNoRSVP() {
+
+            const name = prompt(
+                "Խնդրում ենք գրել Ձեր անունը։"
+            );
+
+
+            if (!name || !name.trim()) {
+                return;
+            }
+
+
+            const cleanName = name.trim();
+
+
+            const sent =
+                await sendRSVP(
+                    cleanName,
+                    "Ոչ",
+                    ""
+                );
+
+
+            if (!sent) {
+
+                alert(
+                    "Չհաջողվեց ուղարկել պատասխանը։ Խնդրում ենք կրկին փորձել։"
+                );
+
+                return;
+
+            }
+
+
+            localStorage.setItem(
+                "eventRSVP",
+                JSON.stringify({
+                    name: cleanName,
+                    people: "",
+                    answer: "Ոչ",
+                    date: new Date().toISOString(),
+                    event: "30.10.2026"
+                })
+            );
+
+
+            document
+                .getElementById("rsvpMain")
+                .style.display = "none";
+
+
+            document
+                .getElementById("success")
+                .classList
+                .add("show");
+
+
+            document
+                .getElementById("successText")
+                .innerHTML =
+                `
+                Շնորհակալություն, ${escapeHTML(cleanName)}։<br><br>
+                Ձեր պատասխանը հաջողությամբ ուղարկվեց։
+                `;
+
+        }
+
+
+        /* =====================================================
+           SAFE TEXT
+        ===================================================== */
+
+        function escapeHTML(text) {
+
+            const div =
+                document.createElement("div");
+
+            div.textContent = text;
+
+            return div.innerHTML;
+
+        }
+
+
+
+        /* =====================================================
+           CONFETTI
+        ===================================================== */
+
+        function createConfetti() {
+
+            const symbols = [
+                "●",
+                "♥",
+                "✦",
+                "•"
+            ];
+
+
+            for (let i = 0; i < 80; i++) {
+
+                const piece =
+                    document.createElement("div");
+
+
+                piece.classList.add("confetti");
+
+
+                piece.textContent =
+                    symbols[
+                        Math.floor(
+                            Math.random() *
+                            symbols.length
+                        )
+                    ];
+
+
+                piece.style.left =
+                    Math.random() * 100 + "vw";
+
+
+                piece.style.fontSize =
+                    (Math.random() * 10 + 5) + "px";
+
+
+                piece.style.animationDuration =
+                    (Math.random() * 3 + 2) + "s";
+
+
+                piece.style.animationDelay =
+                    Math.random() * .7 + "s";
+
+
+                document.body.appendChild(piece);
+
+
+                setTimeout(function() {
+
+                    piece.remove();
+
+                }, 5500);
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           LOAD PREVIOUS RSVP
+        ===================================================== */
+
+        window.addEventListener("DOMContentLoaded", function() {
+
+            const saved =
+                localStorage.getItem("eventRSVP");
+
+
+            if (!saved) return;
+
+
+            try {
+
+                const data =
+                    JSON.parse(saved);
+
+
+                if (
+                    data &&
+                    data.answer === "Այո"
+                ) {
+
+                    console.log(
+                        "Պահպանված մասնակցություն:",
+                        data
+                    );
+
+                }
+
+            } catch (error) {
+
+                console.log(
+                    "Չհաջողվեց կարդալ պահպանված տվյալները։"
+                );
+
+            }
+
+        });
+
+
+    </script>
+
+</body>
+</html>
